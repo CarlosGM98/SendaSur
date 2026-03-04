@@ -1,0 +1,12 @@
+services:
+  app:
+    # Build the image using the Dockerfile in the current directory
+    build: .
+    # Map the container's port 3000 to your machine's port 3000
+    ports:
+      - "3000:3000"
+    # Set environment variables for Express
+    environment:
+      - NODE_ENV=production
+    # Automatically restart the container if it crashes
+    restart: always
